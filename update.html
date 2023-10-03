@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seite von MoinJulian</title>
+    <style>
+
+        body {
+            background-image: url("https://www.hamburg.de/image/13703968/kingTeaser/990/420/c751cf2e5d8933b50b01b43294be265a/LZ/sehenswuerdigkeiten-moodbild-bild.jpg");
+            color: white;
+        }
+      h3 {
+        color: darkgreen;
+      }
+
+      .background-dark {
+        background-color: #262626;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+
+      .margin-top {
+        margin-top: 100px;
+      }
+
+      .timer {
+        font-size: 60px;
+        color: white;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .teal {
+        color: rgb(0, 255, 200)
+      }
+
+      .red {
+        color: rgb(255, 0, 0)
+      }
+    </style>
+  </head>
+
+  <body
+
+  >
+    <h1>Hallo, wilkommen auf meiner Homepage!</h1>
+    <hr />
+
+    <h2>Hier Stelle ich mich vor!</h2>
+
+    <h3>Mein Name</h3>
+
+    <p>Juian</p>
+
+    <h3>Meine Hobbies</h3>
+
+    <ul>
+      <li>
+        Golf
+        <p>
+          <img
+            src="https://static.golfstars.com/files/visuals/photos/184/main-3629_Bourbon2_copie.jpg"
+            width="100" alt="test"
+          />
+        </p>
+      </li>
+      <li>Jiu Jitsu</li>
+      <li>Schwimmen</li>
+    </ul>
+
+    <h3>Mein Lieblingsessen</h3>
+
+    <ol>
+      <li>
+        Pfannkuchen mit Apfelmuß
+        <p>
+          <img
+            src="https://d12xickik43a9a.cloudfront.net/images/magazine/de/M96774-Vegane_Pfannkuchen_96464_Titelbild-Q75-750.jpg"
+            width="100" alt="test"
+          />
+        </p>
+      </li>
+
+      <li>
+        Steak mit Kartoffeln
+        <p>
+          <img
+            src="https://st.depositphotos.com/1733772/4719/i/950/depositphotos_47190641-stock-photo-steak-with-fried-potatoes-in.jpg"
+            width="100" alt="test"
+          />
+        </p>
+      </li>
+
+      <li>
+        Eis
+        <p>
+          <img
+          src=https://tse3.mm.bing.net/th?id=OIP.VdsnhzLWErga_zta5325UgHaE8&pid=Api&P=0&w=298&h=200"
+          width="100" alt="test"/>
+        </p>
+      </li>
+    </ol>
+
+    <h2>HTML Befehle</h2>
+    <table border="1" cellspacin="0" cellpanding="5">
+      <tr>
+        <th>Infos</th>
+        <th>b</th>
+        <th>i</th>
+        <th>u</th>
+        <th>sub</th>
+        <th>sup</th>
+        <th>Title</th>
+        <th>strong</th>
+        <th>em</th>
+        <th>small</th>
+      </tr>
+
+      <tr>
+        <tb><b>Wirkung:</b></tb>
+        <td><b>Test</b></td>
+        <td><i>Test</i></td>
+        <td><u>Test</u></td>
+        <td><sub>Test</sub></td>
+        <td><sup>Test</sup></td>
+        <td><title>Test</title></td>
+        <td><strong>Test</strong></td>
+        <td><em>Test</em></td>
+        <td><small>Test</small></td>
+      </tr>
+
+      <tr>
+        <td><b>Beschreibung:</b></td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+      </tr>
+
+      <tr>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+        <td>Under Construction</td>
+      </tr>
+    </table>
+
+    <p>Mein YouTube Kanal</p>
+    <a
+      href="https://www.youtube.com/channel/UCls1hOj_UaT9Kl-8V22ylag"
+      class="teal"
+    >
+      MoinJulian
+    </a>
+
+    <p>
+      <a href="seite2.html" class="red">
+        Meine andere Seite!
+      </a>
+    </p>
+
+
+
+      <script>
+        let alarm = new Audio(
+          "/Users/julianhammer/html_public/index.html/Eieruhr_alarm.mp3"
+        );
+        let timerStarted = false;
+
+        function startTimer() {
+          if (!timerStarted) {
+            let startTime = new Date().getTime();
+            let fiveMinutes = 1000 * 60 * 5;
+            let endTime = startTime + fiveMinutes;
+
+            setInterval(function () {
+              let timeLeft = endTime - new Date().getTime();
+
+              if (timeLeft > 0) {
+                let minutes = timeLeft / (1000 * 60);
+                minutes = Math.floor(minutes);
+                let seconds = (timeLeft / 1000) % 60;
+                seconds = Math.round(seconds);
+                seconds = ("0" + seconds).slice(-2);
+                let text = "0" + minutes + " : " + seconds;
+                timer.innerHTML = text;
+              } else {
+                alarm.play();
+                timer.innerHTML = "00 : 00";
+              }
+            }, 1000);
+            timerStarted = true;
+          }
+        }
+      </script>
+
+      <div>
+          <!-- <img src="" /> -->
+        </div>
+
+        <div class="center margin-top">
+          <!-- <img src="" /> -->
+        </div>
+
+        <div class="center margin-top timer" id="timer">05 : 00</div>
+
+        <div class="center margin-top timer">
+          <img
+            onclick="startTimer()"
+            src="https://raw.githubusercontent.com/JunusErgin/Eieruhr/main/Eieruhr/img/button.png"
+            alt="button"
+          />
+        </div>
+</html>
